@@ -6,43 +6,48 @@ We’ll walk through real-world examples to give you not just inspiration but al
 
 20 minutes (15 mins talk, 5 mins Q&A)
 
-[walker.js](https://github.com/elbwalker/walker.js) · [elbwalker.com](https://www.elbwalker.com) · [alexander](https://www.linkedin.com/in/alexanderkirtzel/)
+[walker.js](https://github.com/elbwalker/walker.js) · [elbwalker.com](https://www.elbwalker.com) · [Alexander](https://www.linkedin.com/in/alexanderkirtzel/)
 
-## measurement plan
+## The problem
 
-It's all about **achieving data ownership** as one step towards **becoming data driven**.
+To most organizations tracking implementation today is a highly error-prone downstream task that nobody likes. Most of the time there is no universal approach to it. It just grows historically and hysterically with the number of new marketing tools and features. The lack of strategy and documentation creates data, that is neither reliable nor sustainable. It also makes it hard to govern data collection in terms of data privacy. Instead of installing another plugin,or fixing the next tracking error and be annoyed, what about starting with a new approach?
 
-- Creating **transparence** for all stakeholders
-- Encourage **communication** between teams
-- Ensure data **quality** in general
-- Basis to **scale** your analytics
 
-Start **together**: PMs/POs, Marketeers, Engineers etc. need a **common understanding**: What's being measured where, when & why.
+## Measurement plan
 
-- Defining **goals**: The general and current why of your data activities
-- Describing the **entities**: XXX
-- Naming the **actions**: XXX
-- Specifying the **properties**: XXX
-- Discussing the **Destinations**: XXX
+This is all about **achieving data ownership** as one step towards **becoming data-driven**. How does a measurement plan help?
+
+- It creates **transparency** over what is being measured and why
+- It simplifies **communication** between teams, especially between tech and marketing
+- It ensures tracking data **quality**
+- It creates a foundation to **scale** your analytics implementation
+
+Start **together**: Product managers, marketeers, engineers etc. need a **common understanding**: What's being measured where, when & why.
+
+- Define **goals**: The why of your current and future data activities
+- Describe the business **entities**: XXX
+- Name the **actions**: XXX
+- Specify the **properties**: XXX
+- Discusse the **destinations**: XXX
 - Event **mapping**: XXX. And also a huge GDPR bonus.
 
 XXX result of a measurement plan overview
 
-> Recommendation: Have a plan. Work with it.
+> Recommendation: Don't just make a plan. Work with it and iterate.
 
-## implementation layer
+## Implementation layer
 
 - central source of truth
 - documentation
 - living standard
-- vendor agnostic
+- vendor-agnosticism 
 - destination mapping
 
 XXX example measurement.json
 
-> Recommendation: Part of your data collection. Easy to contribute.
+> Recommendation: Create an implementation layer as a part of your data collection. Make it easy to contribute.
 
-## event 'n' context
+## Event 'n' context
 
 ```json5
 {
@@ -81,7 +86,7 @@ XXX example measurement.json
 }
 ```
 
-> Recommendation: Listen to the **Meet the analytics stack** episode "[Why tracking implementation is still hard work and how to improve](https://share.transistor.fm/s/261a952c)" with [Timo Dechau](https://www.linkedin.com/in/timo-dechau/) for a deep dive.
+> Recommendation: Listen to the **Meet the analytics stack** episode "[Why tracking implementation is still hard work and how to improve](https://share.transistor.fm/s/261a952c)" with [Timo Dechau](https://www.linkedin.com/in/timo-dechau/) for a deep dive on event contexts.
 
 ## walker.js
 
@@ -93,17 +98,17 @@ Benefits XXX
 
 > Recommendation: Use the walker.js. Feel free to give a star :)
 
-## testing
+## Testing
 
 Benefits of a descriptive approach
 Selectors and action
 
 > Recommendation: Constant monitoring. No legacy code.
 
-## discussion
+## Discussion
 
 > Start your data setup with a reliable, growing foundation everyone trusts.
 
-Share your thougts
+Share your thoughts
 
 Thank you!
