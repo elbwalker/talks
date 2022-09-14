@@ -49,16 +49,7 @@ XXX result of a measurement plan overview
 
 ## Implementation layer
 
-### Data lifecycle
-
-0. Using
-1. Reporting
-2. Analyzing
-3. Storing
-4. Distributing
-5. Collecting
-6. Implementing <-- We're here now
-7. Planning
+How about **data collection as code**
 
 - central source of truth
 - documentation
@@ -66,11 +57,13 @@ XXX result of a measurement plan overview
 - vendor-agnosticism
 - destination mapping
 
-XXX example measurement.json
+See [measurementplan.ts](./measurementplan.ts) as a declarative example.
 
 > Recommendation: Create an implementation layer as a part of your data collection. Make it easy to contribute.
 
 ## Event 'n' context
+
+XXX Update to real Blog or Article example
 
 ```json5
 {
@@ -131,6 +124,17 @@ Descriptive markup language based on HTML-attributes.
 
 Benefits of a descriptive approach
 Selectors and action
+
+```js
+// Test the ENTITY ACTION event
+[data-elb="ENTITY"][data-elbaction="visible:ACTION"]
+document.querySelector('[data-elb="ENTITY"][data-elbaction="visible:ACTION"]').scrollIntoView();
+
+document.querySelector('[data-elb="ENTITY"][data-elbaction="visible:ACTION"]').click();
+
+```
+
+See [query_events.js](./query_events.js) for a code example to list all events and properties.
 
 > Recommendation: Constant monitoring. No legacy code.
 
