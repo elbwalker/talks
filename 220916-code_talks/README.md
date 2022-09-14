@@ -1,5 +1,7 @@
 # How to set up future-proof event tracking (fast)
 
+[code.talks](https://codetalks.de/)
+
 Teams need behavioral data to build better products. A solid implementation is crucial for any analytics tool to run. But it annoys engineers.
 Learn how to see tracking as a central part of the whole product development process as a techie and manager. Find out how we created a descriptive approach to optimize your analytics implementation workflow to achieve sustainable setups and plenty of testing & monitoring possibilities.
 We’ll walk through real-world examples to give you not just inspiration but also hands-on practices to get started.
@@ -11,7 +13,6 @@ We’ll walk through real-world examples to give you not just inspiration but al
 ## The problem
 
 To most organizations tracking implementation today is a highly error-prone downstream task that nobody likes. Most of the time there is no universal approach to it. It just grows historically and hysterically with the number of new marketing tools and features. The lack of strategy and documentation creates data, that is neither reliable nor sustainable. It also makes it hard to govern data collection in terms of data privacy. Instead of installing another plugin,or fixing the next tracking error and be annoyed, what about starting with a new approach?
-
 
 ## Measurement plan
 
@@ -40,7 +41,7 @@ XXX result of a measurement plan overview
 - central source of truth
 - documentation
 - living standard
-- vendor-agnosticism 
+- vendor-agnosticism
 - destination mapping
 
 XXX example measurement.json
@@ -86,7 +87,7 @@ XXX example measurement.json
 }
 ```
 
-> Recommendation: Listen to the **Meet the analytics stack** episode "[Why tracking implementation is still hard work and how to improve](https://share.transistor.fm/s/261a952c)" with [Timo Dechau](https://www.linkedin.com/in/timo-dechau/) for a deep dive on event contexts.
+> Recommendation: Listen to the **Meet the analytics stack** episode "[Why tracking implementation is still hard work and how to improve](../220907-meet_the_analytics_stack/))" with [Timo Dechau](https://www.linkedin.com/in/timo-dechau/) for a deep dive on event contexts.
 
 ## walker.js
 
