@@ -12,7 +12,18 @@ We’ll walk through real-world examples to give you not just inspiration but al
 
 ## The problem
 
-To most organizations tracking implementation today is a highly error-prone downstream task that nobody likes. Most of the time there is no universal approach to it. It just grows historically and hysterically with the number of new marketing tools and features. The lack of strategy and documentation creates data, that is neither reliable nor sustainable. It also makes it hard to govern data collection in terms of data privacy. Instead of installing another plugin,or fixing the next tracking error and be annoyed, what about starting with a new approach?
+To most organizations tracking implementation today is a highly error-prone downstream task that nobody likes. Most of the time there is no universal approach to it. It just grows historically and hysterically with the number of new marketing tools and features. The lack of strategy and documentation creates data, that is neither reliable nor sustainable. It also makes it hard to govern data collection in terms of data privacy. Instead of installing another plugin, or fixing the next tracking error and be annoyed, what about starting with a new approach?
+
+### Data lifecycle
+
+0. Using
+1. Reporting
+2. Analyzing
+3. Storing
+4. Distributing
+5. Collecting
+6. Implementing
+7. Planning <-- Start here
 
 ## Measurement plan
 
@@ -34,9 +45,20 @@ Start **together**: Product managers, marketeers, engineers etc. need a **common
 
 XXX result of a measurement plan overview
 
-> Recommendation: Don't just make a plan. Work with it and iterate.
+> Recommendation: Have a plan. Work with it and iterate.
 
 ## Implementation layer
+
+### Data lifecycle
+
+0. Using
+1. Reporting
+2. Analyzing
+3. Storing
+4. Distributing
+5. Collecting
+6. Implementing <-- We're here now
+7. Planning
 
 - central source of truth
 - documentation
@@ -89,9 +111,15 @@ XXX example measurement.json
 
 > Recommendation: Listen to the **Meet the analytics stack** episode "[Why tracking implementation is still hard work and how to improve](../220907-meet_the_analytics_stack/))" with [Timo Dechau](https://www.linkedin.com/in/timo-dechau/) for a deep dive on event contexts.
 
-## walker.js
+## @elbwalker/walker.js
 
-Benefits XXX
+Descriptive markup language based on HTML-attributes.
+
+- Creates the **event context**
+- Handles the **triggers**
+- Orders the **race conditions**
+- Distributes to **destinations**
+- It's **open source**
 
 1. entity (`data-elb="XXX"`)
 2. action (`data-elbaction="XXX"`)
