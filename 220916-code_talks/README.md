@@ -36,12 +36,12 @@ This is all about **achieving data ownership** as one step towards **becoming da
 
 Start **together**: Product managers, marketeers, engineers etc. need a **common understanding**: What's being measured where, when & why.
 
-- Define **goals**: The why of your current and future data activities
-- Describe the business **entities**: XXX
-- Name the **actions**: XXX
-- Specify the **properties**: XXX
-- Discusse the **destinations**: XXX
-- Event **mapping**: XXX. And also a huge GDPR bonus.
+- Define **goals**: The why of your current and future data activities (helps to focus)
+- Describe the business **entities**: General objects of your site you want to learn more about (product, order, feature, article)
+- Specify the **properties**: Important attributes to define and differentiate an entity (name, revenue, cta, author)
+- Name the **actions**: What can be done actively with an entity (add, complete, click, read)
+- Discuss the **destinations**: Which destination for wich purpose (GA4 for segmentation, Plausible for reporting, Ads for akquisition)
+- Event **mapping**: How to transform and use previous definitions in each destinations ("order complete" to purchase on Facebook Pixel with marketing consent)
 
 XXX result of a measurement plan overview
 
@@ -49,7 +49,7 @@ XXX result of a measurement plan overview
 
 ## Implementation layer
 
-How about **data collection as code**
+How about **data collection as code**?
 
 - central source of truth
 - documentation
@@ -118,7 +118,7 @@ Descriptive markup language based on HTML-attributes.
 2. action (`data-elbaction="XXX"`)
 3. property (`data-elb-XXX=""`)
 
-> Recommendation: Use the walker.js. Feel free to give a star :)
+> Recommendation: Use the walker.js. Feel free to contribute :)
 
 ## Testing
 

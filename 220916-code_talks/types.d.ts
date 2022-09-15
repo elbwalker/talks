@@ -1,12 +1,24 @@
 export namespace Measurement {
   export interface Plan {
-    entities: Entities;
+    version: number;
     sources: Sources;
     destinations: Destinations;
-    globals: Properties;
-    version: number;
-    users: Users;
+    owners: Owners;
   }
+
+  interface Sources {
+    [sourceId: string]: Source;
+  }
+
+  interface Source {
+    name: string;
+    type: SourceType;
+    owners: Array<ownerId>;
+    entities: Entities;
+    globals: Properties;
+  }
+
+  type SourceType = "app" | "other" | "server" | "web";
 
   interface Entities {
     [entityId: string]: Entity;
@@ -17,7 +29,7 @@ export namespace Measurement {
     description: string;
     actions: Actions;
     properties: Properties;
-    owners: Array<UserId>;
+    owners: Array<ownerId>;
   }
 
   interface Actions {
@@ -74,18 +86,6 @@ export namespace Measurement {
 
   type TriggerType = "load" | "click" | "visible" | "hover" | "submit";
 
-  interface Sources {
-    [sourceId: string]: Source;
-  }
-
-  interface Source {
-    name: string;
-    type: SourceType;
-    owners: Array<UserId>;
-  }
-
-  type SourceType = "app" | "other" | "server" | "web";
-
   interface Destinations {
     [destinationId: string]: Destination;
   }
@@ -93,7 +93,12 @@ export namespace Measurement {
   interface Destination {
     name: string;
     type: DestinationType;
-    owners: Array<UserId>;
+    owners: Array<ownerId>;
+    config: DestinationConfig;
+  }
+
+  interface DestinationConfig {
+    custom: AnyObject;
     events: DestinationEvents;
   }
 
@@ -112,12 +117,14 @@ export namespace Measurement {
     | "plausible"
     | "custom";
 
-  interface Users {
-    [userId: UserId]: User;
+  interface Owners {
+    [ownerId: ownerId]: Owner;
   }
-  type UserId = string;
+  type ownerId = string;
 
-  interface User {
+  interface Owner {
     name: string;
   }
+
+  type AnyObject = Record<string, unknown>;
 }
