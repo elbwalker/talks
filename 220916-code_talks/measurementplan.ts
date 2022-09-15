@@ -76,12 +76,12 @@ const plan: Measurement.Plan = {
           },
           owners: ["alexander"],
         },
-        blog: {
-          name: "Blog",
+        article: {
+          name: "Article",
           description: "Educational content about the usage of our tools",
           actions: {
             impression: {
-              name: "Blog impression",
+              name: "Article impression",
               description: "",
               properties: [{ id: "id", required: true }],
               sources: { web: { required: true } },
@@ -89,7 +89,7 @@ const plan: Measurement.Plan = {
               type: "additional",
             },
             click: {
-              name: "Blog click",
+              name: "Article click",
               description: "",
               properties: [{ id: "id", required: true }],
               sources: { web: { required: true } },
@@ -97,7 +97,7 @@ const plan: Measurement.Plan = {
               type: "additional",
             },
             view: {
-              name: "Blog view",
+              name: "Article view",
               description: "Load of blog article page",
               properties: [
                 { id: "id", required: true },
@@ -112,7 +112,7 @@ const plan: Measurement.Plan = {
               type: "core",
             },
             read: {
-              name: "Blog read",
+              name: "Article read",
               description:
                 "As soon as the last paragraph of an article is visible to the user",
               properties: [{ id: "id", required: true }],
@@ -156,6 +156,19 @@ const plan: Measurement.Plan = {
           owners: ["alexander"],
         },
       },
+      globals: {
+        pagetype: {
+          name: "Pagetype",
+          type: "string",
+          example: "Blog",
+        },
+      },
+    },
+    app_backend: {
+      name: "WebApp",
+      type: "server",
+      owners: ["alexander"],
+      entities: {},
       globals: {},
     },
   },
@@ -183,3 +196,5 @@ const plan: Measurement.Plan = {
     ayla: { name: "Ayla" },
   },
 };
+
+export default plan;

@@ -67,28 +67,25 @@ XXX Update to real Blog or Article example
 
 ```json5
 {
-  event: "newsletter signup", // combination of entity and action
+  event: "article view", // combination of entity and action
   data: {
-    // arbitrary set properties with the data-elb-newsletter attribute
+    // arbitrary set properties
     list: "analytics_hacks",
     position: "overlay",
   },
   globals: {
-    // all set properties with the data-elbglobals attribute
-    // Not shown in example usage snippet (data-elbglobals="language:en;test:darkmode")
     language: "en",
     test: "darkmode",
   },
   user: {
-    // stored user ids (manually added once)
     id: "userid",
     device: "cookieid",
   },
-  nested: [], // all nested entities within the newsletter
+  nested: [], // all nested entities within the article
   id: "1647968113641-01b5e2-5", // timestamp, group & count of the event
-  trigger: "click", // name of the trigger that fired
-  entity: "newsletter", // entity name
-  action: "signup", // entity action
+  trigger: "load", // name of the trigger that fired
+  entity: "article", // entity name
+  action: "read", // entity action
   timestamp: 1647968113641, // time when the event fired
   timing: 13.37, // how long it took from the page load to trigger the event
   group: "01b5e2", // random group id for all events on a page
@@ -97,8 +94,7 @@ XXX Update to real Blog or Article example
     // Helpful when working with raw data
     walker: 1.4, // used walker.js version
     config: 42, // a custom configuration version number
-  },
-  walker: true, // flag to filter events
+  }
 }
 ```
 
@@ -114,9 +110,9 @@ Descriptive markup language based on HTML-attributes.
 - Distributes to **destinations**
 - It's **open source**
 
-1. entity (`data-elb="XXX"`)
-2. action (`data-elbaction="XXX"`)
-3. property (`data-elb-XXX=""`)
+1. entity (`data-elb="article"`)
+2. action (`data-elbaction="load:view"`)
+3. property (`data-elb-article="title:How to ..."`)
 
 > Recommendation: Use the walker.js. Feel free to contribute :)
 
@@ -126,12 +122,12 @@ Benefits of a descriptive approach
 Selectors and action
 
 ```js
-// Test the ENTITY ACTION event
-[data-elb="ENTITY"][data-elbaction="visible:ACTION"]
-document.querySelector('[data-elb="ENTITY"][data-elbaction="visible:ACTION"]').scrollIntoView();
+// Test the article impression event
+document
+  .querySelector('[data-elb="article"][data-elbaction="visible:impression"]')
+  .scrollIntoView();
 
-document.querySelector('[data-elb="ENTITY"][data-elbaction="visible:ACTION"]').click();
-
+document.querySelector('[data-elb="article"] [data-elbaction="click"]').click();
 ```
 
 See [query_events.js](./query_events.js) for a code example to list all events and properties.
