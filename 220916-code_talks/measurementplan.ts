@@ -16,11 +16,11 @@ const plan: Measurement.Plan = {
         },
       },
       properties: {},
-      owners: ["alexander"],
+      owners: ["Alexander"],
     },
     cta: {
       name: "CTA",
-      description: "Engage users to use our products and services",
+      description: "Get users to try out our library",
       actions: {
         impression: {
           name: "CTA impression",
@@ -46,7 +46,7 @@ const plan: Measurement.Plan = {
         },
         github: {
           name: "CTA github",
-          description: "Click button 'Check it out on GithHub'",
+          description: "Click button 'Check it out on GitHub'",
           properties: [
             { id: "title", required: true },
             { id: "position", required: true },
@@ -68,11 +68,11 @@ const plan: Measurement.Plan = {
           example: "footer",
         },
       },
-      owners: ["alexander"],
+      owners: ["Alexander"],
     },
     blog: {
       name: "Blog",
-      description: "Educational content about the  usage of out tools",
+      description: "Educational content about the usage of our tools",
       actions: {
         impression: {
           name: "Blog impression",
@@ -92,7 +92,7 @@ const plan: Measurement.Plan = {
         },
         view: {
           name: "Blog view",
-          description: "Load of a fully detailed blog article",
+          description: "Load of blog article page",
           properties: [
             { id: "id", required: true },
             { id: "title", required: true },
@@ -107,7 +107,7 @@ const plan: Measurement.Plan = {
         },
         read: {
           name: "Blog read",
-          description: "As soon as someone sees the end of an article",
+          description: "As soon as the last paragraph of an article is visible to the user",
           properties: [{ id: "id", required: true }],
           sources: { web: { required: true } },
           trigger: { type: "visible" },
@@ -131,7 +131,7 @@ const plan: Measurement.Plan = {
           example: "2022-03-09T00:00:00.000Z",
         },
         category: {
-          name: "The main category the blog article belongs to",
+          name: "Main content category the blog article belongs to",
           type: "string",
           example: "Product",
         },
@@ -141,26 +141,26 @@ const plan: Measurement.Plan = {
           example: "Ayla",
         },
         readingTime: {
-          name: "The estimated reading time",
+          name: "Estimated reading time in minutes",
           type: "number",
           example: "6",
         },
       },
-      owners: ["alexander"],
+      owners: ["Alexander"],
     },
   },
   sources: {
     web: {
       name: "elbwalker.com",
       type: "web",
-      owners: ["alexander"],
+      owners: ["Alexander"],
     },
   },
   destinations: {
     datalake: {
       name: "",
       type: "event-pipe",
-      owners: ["alexander"],
+      owners: ["Alexander"],
       events: {
         "*": {
           "*": {
