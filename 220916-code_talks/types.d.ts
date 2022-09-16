@@ -40,15 +40,10 @@ export namespace Measurement {
     name: string;
     description: string;
     properties: Array<PropertyLink>;
-    sources: ActionSources;
     trigger: Trigger;
     type: ActionType;
   }
   type ActionType = "core" | "additional";
-
-  interface ActionSources {
-    [sourceId: string]: SourceLink;
-  }
 
   type ConsentList = Array<ConsentId>;
   type ConsentId = string;
