@@ -31,7 +31,7 @@ This is all about **achieving data ownership** as one step towards **becoming da
 
 - It creates **transparency** over what is being measured and why
 - It simplifies **communication** between teams, especially between tech and marketing
-- It ensures tracking data **quality**
+- It ensures tracking **data quality**
 - It creates a foundation to **scale** your analytics implementation
 
 Start **together**: Product managers, marketeers, engineers etc. need a **common understanding**: What's being measured where, when & why.
@@ -42,8 +42,6 @@ Start **together**: Product managers, marketeers, engineers etc. need a **common
 - Name the **actions**: What can be done actively with an entity (add, complete, click, read)
 - Discuss the **destinations**: Which destination for wich purpose (GA4 for segmentation, Plausible for reporting, Ads for akquisition)
 - Event **mapping**: How to transform and use previous definitions in each destinations ("order complete" to purchase on Facebook Pixel with marketing consent)
-
-XXX result of a measurement plan overview
 
 > Recommendation: Have a plan. Work with it and iterate.
 
@@ -62,8 +60,6 @@ See [measurementplan.ts](./measurementplan.ts) as a declarative example.
 > Recommendation: Create an implementation layer as a part of your data collection. Make it easy to contribute.
 
 ## Event 'n' context
-
-XXX Update to real Blog or Article example
 
 ```json5
 {
@@ -94,7 +90,7 @@ XXX Update to real Blog or Article example
     // Helpful when working with raw data
     walker: 1.4, // used walker.js version
     config: 42, // a custom configuration version number
-  }
+  },
 }
 ```
 
