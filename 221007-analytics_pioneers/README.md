@@ -10,7 +10,7 @@
 
 [walker.js](https://github.com/elbwalker/walker.js) · [elbwalker.com](https://www.elbwalker.com) · [Alexander](https://www.linkedin.com/in/alexanderkirtzel/)
 
-(221007 Analytics Pioneers.pdf)[./221007 Analytics Pioneers.pdf]
+Slides [221007 Analytics Pioneers.pdf](./221007%20Analytics%20Pioneers.pdf)
 
 ## Measurement Plan
 
