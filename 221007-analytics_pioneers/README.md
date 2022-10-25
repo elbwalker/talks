@@ -1,7 +1,6 @@
 # Tracking-Implementierung on scale
 
-[Analytics Pioneers Community Training](https://analytics-pioneers.de/community-trainings/)
-[Slides collection](https://gitlab.com/mstade81/analytics-pioneers)
+[Analytics Pioneers Community Training](https://analytics-pioneers.de/community-trainings/) · [Slides collection](https://gitlab.com/mstade81/analytics-pioneers)
 
 - Definition eines Measurement Plans (wie ich ihn nutze & warum er so wichtig ist)
 - Aufbau & direkte Umsetzung eines Implementation-Layers (deskriptiv im HTML als Grundlage für nachhaltige Setups)
@@ -43,4 +42,4 @@ Organisms (Entities, product)
 Templates (Context, recommendation)
 Pages (Globals, magazin)
 
-Live coding im (React example)[https://github.com/elbwalker/walker.js/tree/main/examples/react]
+Live coding im [React example](https://github.com/elbwalker/walker.js/tree/main/examples/react)
