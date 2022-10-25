@@ -10,6 +10,8 @@ We’ll walk through real-world examples to give you not just inspiration but al
 
 [walker.js](https://github.com/elbwalker/walker.js) · [elbwalker.com](https://www.elbwalker.com) · [Alexander](https://www.linkedin.com/in/alexanderkirtzel/)
 
+> Wath the recording: [https://www.youtube.com/watch?v=KUqrZ4WJjDs](https://www.youtube.com/watch?v=KUqrZ4WJjDs)
+
 ## The problem
 
 To most organizations tracking implementation today is a highly error-prone downstream task that nobody likes. Most of the time there is no universal approach to it. It just grows historically and hysterically with the number of new marketing tools and features. The lack of strategy and documentation creates data, that is neither reliable nor sustainable. It also makes it hard to govern data collection in terms of data privacy. Instead of installing another plugin, or fixing the next tracking error and be annoyed, what about starting with a new approach?
