@@ -1,5 +1,6 @@
 # elbwalker talks
 
+- [2023-03-27 Beyond Pageviews (DE)](./230327-beyond-pageviews/)
 - [2023-03-25 MeasureCamp Helsinki (EN)](./230325-measurecamp_helsinki/)
 - [2023-02-17 Analytics Pioneers (DE)](./230217-analytics_pioneers/)
 - [2022-11-28 Clouds und die Helden (DE)](./221128-clouds_und_die_helden/)
