@@ -28,6 +28,10 @@
         border-color: #9900ff;
         box-shadow: 0 0 10px #9900ff;
       }
+      [data-elbcontext="font:beautiful"] {
+        font-family: "Comic Sans MS";
+        font-style: italic;
+      }
       .virtual_page {
         margin: 200px auto;
       }
@@ -54,31 +58,21 @@
 
       // Demo Race Conditions
       // // Destination Console Debug
-      elb("walker destination", {
-        push: (event) => console.log("DEBUG", event),
-      });
+      // elb("walker destination", {
+      //   push: (event) => console.log("DEBUG", event),
+      // });
 
       // // Destination Console Consent
-      // elb(
-      //   'walker destination',
-      //   { push: (event) => console.log('CONSENT', event) },
-      //   { consent: { functional: true } },
-      // );
-
-      // Destination GTM
-      // const gtm = (await import('./scripts/destinations/gtm.mjs')).default;
-      // elb('walker destination', gtm, {
-      //   consent: { functional: true },
-      //   custom: {
-      //     // containerId: 'GTM-WCFR4W5',
-      //   },
-      //   // loadScript: true,
-      // });
+      elb(
+        "walker destination",
+        { push: (event) => console.log("CONSENT", event) },
+        { consent: { functional: true } }
+      );
 
       // // Destination API
       const api = (await import("./scripts/destinations/api.mjs")).default;
       elb("walker destination", api, {
-        // consent: { functional: true },
+        consent: { functional: true },
         custom: {
           url: "https://server-side-tagging-ybbfvkxhia-ey.a.run.app/quokka",
         },
@@ -130,10 +124,17 @@
       };
 
       function getUser() {
+        const idKey = "elb_user_id";
         const sessionKey = "elb_user_session";
         const deviceKey = "elb_user_device";
+        var id = utils.storageRead(idKey);
         var session = utils.storageRead(sessionKey);
         var device = utils.storageRead(deviceKey);
+
+        if (!id) {
+          id = utils.getId(5);
+          utils.storageWrite(idKey, id);
+        }
 
         if (!session) {
           session = utils.getId(10);
@@ -146,6 +147,7 @@
         }
 
         return {
+          id,
           session,
           device,
         };
@@ -158,10 +160,11 @@
         if (consentState == "denied") consentDenied();
 
         consentStateElem.innerText = consentState;
-        // Start
-        elb("walker run");
       };
       consentRefresh();
+
+      // Start
+      elb("walker run");
     </script>
   </head>
   <body class="relative">
@@ -1550,6 +1553,17 @@
                   });
               });
             }
+            function toggleTest() {
+              document.querySelectorAll("main").forEach((elem) => {
+                elem.classList.toggle("test");
+
+                if (elem.classList.contains("test")) {
+                  elem.setAttribute("data-elbcontext", "font:beautiful");
+                } else {
+                  elem.removeAttribute("data-elbcontext");
+                }
+              });
+            }
           </script>
           <span class="isolate inline-flex rounded-md shadow-sm">
             <button
@@ -1586,6 +1600,15 @@
               class="elb-action relative -ml-px inline-flex items-center rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
             >
               Action
+            </button>
+          </span>
+          <span class="isolate inline-flex rounded-md shadow-sm">
+            <button
+              type="button"
+              onclick="toggleTest()"
+              class="elb-action relative -ml-px inline-flex items-center rounded-l-md rounded-r-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              Test
             </button>
           </span>
         </p>
