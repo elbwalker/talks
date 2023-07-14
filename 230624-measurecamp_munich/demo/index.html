@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MeasureCamp Munich</title>
+    <title>walker.js demo</title>
     <style>
       .elb-globals [data-elbglobals] {
         outline: none;
@@ -56,12 +56,6 @@
         (window.elbLayer = window.elbLayer || []).push(arguments);
       }
 
-      // Demo Race Conditions
-      // // Destination Console Debug
-      // elb("walker destination", {
-      //   push: (event) => console.log("DEBUG", event),
-      // });
-
       // // Destination Console Consent
       elb(
         "walker destination",
@@ -69,7 +63,7 @@
         { consent: { functional: true } }
       );
 
-      // // Destination API
+      // Destination API
       const api = (await import("./scripts/destinations/api.mjs")).default;
       elb("walker destination", api, {
         consent: { functional: true },
