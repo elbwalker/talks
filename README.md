@@ -1,5 +1,6 @@
 # elbwalker talks
 
+- [2023-06.24 MeasureCamp Munich (EN)](./230624-measurecamp_munich/)
 - [2023-06.10 MeasureCamp Copenhagen (EN)](./230610-measurecamp_copenhagen/)
 - [2023-04-22 MeasureCamp Amsterdam (EN)](./230422-measurecamp_amsterdam/)
 - [2023-03-27 Beyond Pageviews (DE)](./230327-beyond-pageviews/)
