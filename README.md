@@ -1,5 +1,7 @@
 # elbwalker talks
 
+- [2023-10-14 MeasureCamp (EN)](./231014-measurecamp_warsaw/)
+- [2023-10-11 MeasureSummit (EN)](./231011-measuresummit/)
 - [2023-09-30 MeasureCamp London (EN)](./230930-measurecamp_london/)
 - [2023-09-09 MeasureCamp Czechia (EN)](./230909-measurecamp_czechia/)
 - [2023-06-24 MeasureCamp Munich (EN)](./230624-measurecamp_munich/)
@@ -10,8 +12,8 @@
 - [2023-02-17 Analytics Pioneers (DE)](./230217-analytics_pioneers/)
 - [2022-11-28 Clouds und die Helden (DE)](./221128-clouds_und_die_helden/)
 - [2022-10-07 Analytics Pioneers (DE)](./221007-analytics_pioneers/)
-- [2022-09-16 code.talks](./220916-code_talks/)
-- [2022-09-07 Meet the analytics stack](./220907-meet_the_analytics_stack/)
+- [2022-09-16 code.talks (EN)](./220916-code_talks/)
+- [2022-09-07 Meet the analytics stack (EN)](./220907-meet_the_analytics_stack/)
 - [2022-01-26 BI or DIE (DE)](./220126-bi_or_die/)
 - [2021-12-03 DataEngage (DE)](./211203-dataengage/)
 - [2021-12-03 Dashboard Heroes (DE)](./211203-dashboard_heroes/)
