@@ -1,6 +1,9 @@
 # elbwalker talks
 
-- [2023-10-14 MeasureCamp (EN)](./231014-measurecamp_warsaw/)
+- [2023-12-07 GTM4ward (EN)](./231207-gtm4ward/)
+- [2023-11-18 MeasureCamp Vienna (EN)](./231118-measurecamp_vienna/)
+- [2023-11-15 Marketing Analytics Summit (EN)](./231115-marketing-analytics-summit/)
+- [2023-10-14 MeasureCamp Warsaw (EN)](./231014-measurecamp_warsaw/)
 - [2023-10-11 MeasureSummit (EN)](./231011-measuresummit/)
 - [2023-09-30 MeasureCamp London (EN)](./230930-measurecamp_london/)
 - [2023-09-09 MeasureCamp Czechia (EN)](./230909-measurecamp_czechia/)
