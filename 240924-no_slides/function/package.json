@@ -1,0 +1,17 @@
+{
+  "name": "collect-function",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.0",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@elbwalker/client-node": "^3.0.2",
+    "@elbwalker/destination-node-bigquery": "^2.0.0",
+    "@elbwalker/utils": "^3.4.0",
+    "tsup": "^8.2.4"
+  }
+}

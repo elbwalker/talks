@@ -1,0 +1,23 @@
+{
+  "name": "collect",
+  "main": "index.ts",
+  "scripts": {
+    "build": "npm run clean && npm run build:function && npm run build:www",
+    "build:function": "cd function && npm run build",
+    "build:www": "cd www && npm run build",
+    "clean": "rm -rf function/dist && rm -rf www/dist",
+    "deploy": "npm run build && pulumi up"
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elbwalker/client-node": "^3.0.2",
+    "@elbwalker/destination-node-etag": "^0.0.2",
+    "@elbwalker/utils": "^3.4.0",
+    "@pulumi/gcp": "^7.0.0",
+    "@pulumi/pulumi": "^3.113.0",
+    "@pulumi/synced-folder": "^0.0.9"
+  }
+}

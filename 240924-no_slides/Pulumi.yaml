@@ -1,0 +1,13 @@
+name: collect
+description: Client- and server-side data collection with walkerOS
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  collect:functionName: collect
+  collect:functionSrc: ./function
+  collect:siteSrc: ./www
+  collect:errorDocument: error.html
+  collect:indexDocument: index.html
+  gcp:region: europe-west3

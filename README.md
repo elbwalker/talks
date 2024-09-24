@@ -1,5 +1,6 @@
 # elbwalker talks
 
+- [2024-09-24 NO SLIDES (EN)](./240924-no_slides/)
 - [2023-12-07 GTM4ward (EN)](./231207-gtm4ward/)
 - [2023-11-18 MeasureCamp Vienna (EN)](./231118-measurecamp_vienna/)
 - [2023-11-15 Marketing Analytics Summit (EN)](./231115-marketing-analytics-summit/)

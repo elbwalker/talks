@@ -1,0 +1,5 @@
+encryptionsalt: v1:AFyGfrrRYJo=:v1:r5k+0CjbF60XurGx:RZ+ObDR/MRc2DjLwrKM757urUhU4Mw==
+config:
+  gcp:credentials: credentials/pulumi.json
+  gcp:project: playground-388912
+  gcp:region: europe-west3

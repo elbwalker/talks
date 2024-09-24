@@ -1,0 +1,20 @@
+{
+  "name": "collect-www",
+  "version": "0.1.0",
+  "scripts": {
+    "build:js": "tsup",
+    "build:html": "cp src/*.html dist",
+    "build": "npm run build:js && npm run build:html"
+  },
+  "dependencies": {
+    "@elbwalker/destination-web-api": "^2.4.1",
+    "@elbwalker/destination-web-google-ga4": "^3.0.3",
+    "@elbwalker/walker.js": "^3.0.3",
+    "@google-cloud/functions-framework": "^3.1.0",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "cp-cli": "^2.0.0",
+    "tsup": "^8.2.4"
+  }
+}
