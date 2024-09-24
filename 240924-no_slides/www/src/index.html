@@ -67,6 +67,7 @@
       window.consentReset = () => {
         // Reset choice
         utils.storageDelete(consentKey, "local");
+        utils.storageDelete("elbSessionId", "local");
         consentRefresh();
       };
 
@@ -148,11 +149,13 @@
             <a
               href="#"
               class="inline-block rounded-md border border-transparent py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
+              data-elbglobals="language:en"
               >🇬🇧</a
             >
             <a
               href="#"
               class="inline-block rounded-md border border-transparent py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
+              data-elbglobals="cart_value:42"
               >🛒</a
             >
           </div>
@@ -162,13 +165,12 @@
 
     <main>
       <div id="home" class="bg-white">
-        <div
-          class="mx-auto max-w-7xl py-8 sm:px-6 lg:px-8"
-        >
+        <div class="mx-auto max-w-7xl py-8 sm:px-6 lg:px-8">
           <div
             data-elb="promotion"
             data-elbaction="visible:view"
             data-elb-promotion="category:analytics"
+            data-elbcontext="journey:discover"
             class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 text-center shadow-2xl sm:rounded-3xl sm:px-16"
           >
             <h2
@@ -218,7 +220,7 @@
         </div>
 
         <div
-          data-elbcontext="module:recommendations"
+          data-elbcontext="journey:discover;module:recommendations"
           class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
         >
           <h2 class="text-xl font-bold text-gray-900">Recommendations</h2>
@@ -266,6 +268,7 @@
                 <a
                   href="#"
                   data-elbaction="click:add"
+                  data-elbcontext="journey:cart"
                   class="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200"
                   >Add to cart
                 </a>
@@ -311,6 +314,7 @@
                 <a
                   href="#"
                   data-elbaction="click:add"
+                  data-elbcontext="journey:cart"
                   class="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200"
                   >Add to cart
                 </a>
@@ -361,6 +365,7 @@
                 <a
                   href="#"
                   data-elbaction="click:add"
+                  data-elbcontext="journey:cart"
                   class="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200"
                   >Add to cart
                 </a>
@@ -406,6 +411,7 @@
                 <a
                   href="#"
                   data-elbaction="click:add"
+                  data-elbcontext="journey:cart"
                   class="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200"
                   >Add to cart
                 </a>
@@ -418,6 +424,7 @@
       <div
         id="product_detail"
         class="virtual_page bg-white"
+        data-elbcontext="journey:detail"
       >
         <div class="bg-white">
           <div
@@ -652,6 +659,7 @@
 
       <div
         id="checkout_view"
+        data-elbcontext="journey:checkout"
         class="virtual_page bg-white"
       >
         <div class="bg-white">
@@ -1123,7 +1131,11 @@
         </div>
       </div>
 
-      <div id="order_complete" class="virtual_page bg-white">
+      <div
+        id="order_complete"
+        class="virtual_page bg-white"
+        data-elbcontext="journey:complete"
+      >
         <div
           class="max-w-2xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:py-32 lg:grid lg:grid-cols-2 lg:gap-x-8 xl:gap-x-24"
         >
@@ -1464,16 +1476,16 @@
             Accept
           </a>
           <a
-            class="rounded inline-flex items-center px-4 py-2 my-2 leading-none text-white bg-gray-600 hover:bg-gray-800"
-            onclick="window.consentReset()"
-          >
-            Reset
-          </a>
-          <a
             class="rounded inline-flex items-center px-4 py-2 my-2 leading-none text-white bg-red-600 hover:bg-red-800"
             onclick="window.consentDeny()"
           >
             Decline
+          </a>
+          <a
+            class="rounded inline-flex items-center px-4 py-2 my-2 leading-none text-white bg-gray-600 hover:bg-gray-800"
+            onclick="window.consentReset()"
+          >
+            Reset
           </a>
         </p>
         <p class="text-sm leading-6 text-white">
